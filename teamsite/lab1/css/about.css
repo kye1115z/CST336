@@ -1,0 +1,32 @@
+.about_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.about_table {
+  margin-bottom: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.about_table th,
+.about_table td {
+  width: 50%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.about_table th {
+  background-color: #64b5f6;
+  color: #244f78;
+  font-weight: 600;
+}
+
+.about_table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}

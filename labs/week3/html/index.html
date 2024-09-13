@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess the Number!</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../image/question_mark.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="container">
+      <section id="title_box">
+        <p class="title">Guess the Number!</p>
+        <p class="desc">
+          Guess a number between 1 and 99<br />in seven attempts!
+        </p>
+      </section>
+      <section id="content_box">
+        <div class="content_wrap">
+          <span>Enter Guess: </span>
+          <input id="guess_input" type="number" />
+          <button id="guess_button">Guess!</button>
+        </div>
+        <div class="message_wrap">
+          <p id="message"></p>
+        </div>
+        <p id="previous_guess_message"></p>
+      </section>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

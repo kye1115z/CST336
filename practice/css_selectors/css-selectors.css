@@ -1,0 +1,70 @@
+body {
+  background-color: black;
+}
+
+.image-column {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  color: yellow;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: max(2vw, 7vw);
+  margin: 0 auto;
+}
+
+.caption {
+  color: white;
+  font-size: max(2vw, 4vw);
+}
+
+.img_figure {
+  text-align: center;
+  width: 40%;
+}
+
+.hr_line {
+  width: 75%;
+  margin-top: 20px;
+}
+
+.footer {
+  font-size: 3vw;
+  color: silver;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer_logo {
+  width: 15%;
+}
+
+#topleft_img {
+  border-top-left-radius: 25px;
+  border: 1px solid yellow;
+  width: 100%;
+  height: auto;
+}
+
+#topright_img {
+  border-top-right-radius: 25px;
+  border: 1px solid yellow;
+  width: 100%;
+  height: auto;
+}
+
+#bottomleft_img {
+  border-bottom-left-radius: 25px;
+  border: 1px solid yellow;
+  width: 100%;
+  height: auto;
+}
+
+#bottomright_img {
+  border-bottom-right-radius: 25px;
+  border: 1px solid yellow;
+  width: 100%;
+  height: auto;
+}

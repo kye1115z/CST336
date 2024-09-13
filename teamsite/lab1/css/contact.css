@@ -1,0 +1,38 @@
+.contact_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 50px;
+  width: 100%;
+}
+
+.form_box {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+iframe {
+  border: none;
+  margin: 0;
+}
+
+.instagram_box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.subheader {
+  font-size: large;
+  font-weight: bold;
+}
+
+.instagram {
+  text-decoration: none;
+  color: #0d47a1;
+}
