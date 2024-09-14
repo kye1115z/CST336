@@ -151,6 +151,7 @@ main {
 
 .font_60 {
   margin: 0px;
+  margin-bottom: 16px;
   font-size: 60px;
   /* semi bold로 변경해 */
   font-weight: bold;
@@ -193,4 +194,8 @@ main {
 
 .gray2 {
   color: #717171;
+}
+
+.font_bold {
+  font-weight: bold;
 }
