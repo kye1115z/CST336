@@ -148,3 +148,32 @@ main {
   font-weight: bold;
   color: #f5f7fa;
 }
+
+.font_60 {
+  font-size: 60px;
+  /* semi bold로 변경해 */
+  font-weight: bold;
+}
+
+.font_36 {
+  font-size: 36px;
+  /* semi bold로 변경해 */
+  font-weight: bold;
+}
+
+.font_28 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.font_23 {
+  font-size: 23px;
+  /* regular로 변경해 */
+  font-weight: normal;
+}
+
+.font_16 {
+  font-size: 16px;
+  /* regular로 변경해 */
+  font-weight: normal;
+}
