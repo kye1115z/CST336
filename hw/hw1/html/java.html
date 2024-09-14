@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Programming Languages</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/java.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="nav_box">
@@ -25,11 +33,120 @@
       </div>
     </nav>
     <main class="main_box">
-        <section class="hero_section">
-        </section>
-        <section class="content_section">
-
-        </section>
+      <section class="hero_section">
+        <div id="hero_left">
+          <p class="font_60 main_green">JAVA</p>
+          <p class="font_20 gray2">
+            The programming language with a “write once, run anywhere”
+            mantra,<br />
+            making it as versatile as your favorite coffee shop’s menu!
+          </p>
+        </div>
+        <img src="../image/java_small.png" alt="java_logo" id="hero_image" />
+      </section>
+      <section id="content_section">
+        <div class="odd">
+          <p class="content">
+            The Java language was created by James Gosling at Sun Microsystems
+            in June 1991.
+          </p>
+        </div>
+        <div class="odd">
+          <p class="title">Why create a new language?</p>
+          <p class="content">
+            &nbspInitially, Java was developed for embedded software used in
+            appliances like toasters, microwaves, and remote controls. Although
+            languages such as C and C++ were already in use for hardware, a new
+            language was needed. At that time, most computer languages were
+            designed to be compiled specifically for particular platforms (or
+            operating systems) or hardware. As a result, each platform and CPU
+            required its own compiler, leading to high development costs and
+            lengthy processes. For example, while C++ programs could be compiled
+            for various CPUs, different C++ compilers were needed for each
+            platform and CPU.
+          </p>
+          <p class="content">
+            &nbspJames Gosling and his colleagues set out to develop a
+            cross-platform language with excellent portability, capable of
+            running on various environments regardless of the operating system
+            or CPU. This goal led to the creation of Java, embodying the "Write
+            Once, Run Anywhere" (WORA) philosophy.
+          </p>
+        </div>
+        <div class="even">
+          <div>
+            <p class="title">Why did they decide to call it Java?</p>
+            <p class="content">
+              &nbspInitially, the language was not called Java but Oak. James
+              Gosling, who was part of Sun Microsystems' Green Team, originally
+              named the language GreenTalk after his team. Later, inspired by
+              the oak tree outside the office, he changed the name to Oak.
+              However, upon discovering that the name Oak was already in use by
+              Oak Technologies, he and his colleagues held a meeting to choose a
+              new name. Among the candidates like "dynamic," "revolutionary,"
+              "Silk," "jolt," and "DNA," they ultimately decided on Java, named
+              after the coffee beans from the Indonesian island of Java. (That’s
+              probably why the logo features coffee!)
+            </p>
+            <p class="content">
+              &nbspIn conclusion, the language started as Oak in 1991, but from
+              version 1.0.2, released in 1996, it has been known as Java.
+            </p>
+          </div>
+        </div>
+        <div class="odd">
+          <p class="title">Features of Java</p>
+          <p class="content">
+            &nbspThe developers of Java came from a Unix-based background, so
+            the syntax of Java is similar to the C language, which is the
+            ancestor of C++. Unlike C++, which added object-oriented features to
+            C, Java was developed as an object-oriented language from the start.
+          </p>
+          <p class="content">
+            &nbspAs explained earlier, the most significant feature of Java is
+            its platform (or OS) and CPU independence. The Java compiler
+            converts Java code into a special binary form called Java bytecode.
+            To execute Java bytecode, a special virtual machine called the Java
+            Virtual Machine (JVM) is required. This virtual machine can run Java
+            bytecode in the same way on any platform. As a result, programs
+            developed in Java can run anywhere on systems with a JVM installed,
+            regardless of the CPU or operating system. This feature aligns well
+            with the nature of web applications and contributed to Java's
+            explosive popularity.
+          </p>
+        </div>
+        <div class="even">
+          <div>
+            <p class="title">Development of Java</p>
+            <p class="content">
+              &nbspJava rose to prominence with the advent of the Internet and
+              the World Wide Web (WWW). The emergence of the web, which demanded
+              portable languages, propelled Java to the forefront of computer
+              language design projects. Many programmers initially realized that
+              while portable programs were desirable, they were also challenging
+              to implement, causing platform-independent and highly portable
+              program development to fall by the wayside. However, with the rise
+              of the Internet and the web, the issue of portability came back
+              into focus, as the Internet is a vast distributed system
+              overflowing with various computers, operating systems, and CPUs.
+            </p>
+            <p class="content">
+              &nbspIn 1998, the release of J2SE 1.2 introduced Java Applets,
+              which allowed Java to run on the web, leading to a surge in Java's
+              popularity.
+            </p>
+          </div>
+        </div>
+        <div class="odd">
+          <p class="title">Recent Developments</p>
+          <p class="content">
+            &nbspSince then, Java has continued to gain popularity with each new
+            version update, adding various features. In 2009, Sun Microsystems
+            was acquired by Oracle, and Java's ownership transferred to Oracle
+            as well.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="footer_box">
       <div id="footer_left">
@@ -47,10 +164,9 @@
       <div id="footer_right">
         <p id="contact">Contact</p>
         <div>
-            <p>Email:<br />yeaekim@csumb.edu</p>
-            <p>Instagram:<br />@44_ye_42</p>
+          <p>Email:<br />yeaekim@csumb.edu</p>
+          <p>Instagram:<br />@44_ye_42</p>
         </div>
-      </div>
       </div>
     </footer>
   </body>

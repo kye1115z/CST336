@@ -1,0 +1,51 @@
+#hero_left {
+  margin-left: 10%;
+}
+
+#hero_image {
+  margin-right: 20%;
+  height: 326px;
+}
+
+#content_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 166px;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.title {
+  margin: 0px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #4caf4f;
+}
+
+.content {
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 170%;
+  color: #717171;
+}
+
+.odd {
+  margin: 0px 10%;
+  margin-bottom: 44px;
+}
+
+.even {
+  margin: 7%;
+  width: 86%;
+  background-color: #f5f7fa;
+  border-radius: 4px;
+
+  div {
+    padding: 50px;
+  }
+}

@@ -4,6 +4,8 @@ body {
   height: 100%;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 
 body {
@@ -12,8 +14,6 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
-  font-family: "Kanit", sans-serif;
-  font-style: normal;
 }
 
 main {
@@ -24,6 +24,8 @@ main {
 .nav_box {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
   padding: 30px 0px;
   width: 100%;
   background-color: #f5f7fa;
@@ -59,8 +61,7 @@ main {
 .nav_link {
   text-decoration: none;
   color: #18191f;
-  /* regular로 변경 */
-  font-weight: normal;
+  font-weight: regular;
 
   &:hover {
     color: #4caf4f;
@@ -131,8 +132,7 @@ main {
     p {
       color: #f5f7fa;
       font-size: 14px;
-      /* regular로 변경해 */
-      font-weight: normal;
+      font-weight: 400;
       margin: 0;
       margin-right: 20%;
       margin-bottom: 12px;
@@ -144,8 +144,7 @@ main {
   margin: 0px;
   margin-bottom: 24px;
   font-size: 20px;
-  /* semibold로 변경 */
-  font-weight: bold;
+  font-weight: 600;
   color: #f5f7fa;
 }
 
@@ -153,15 +152,13 @@ main {
   margin: 0px;
   margin-bottom: 16px;
   font-size: 60px;
-  /* semi bold로 변경해 */
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .font_36 {
   margin: 0px;
   font-size: 36px;
-  /* semi bold로 변경해 */
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .font_28 {
@@ -173,15 +170,13 @@ main {
 .font_23 {
   margin: 0px;
   font-size: 23px;
-  /* regular로 변경해 */
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .font_16 {
   margin: 0px;
   font-size: 16px;
-  /* regular로 변경해 */
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .main_green {
