@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Programming Languages</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/js.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +33,196 @@
       </div>
     </nav>
     <main class="main_box">
-      <section class="hero_section"></section>
-      <section class="content_section"></section>
+      <section class="hero_section">
+        <img src="../image/javascript.webp" alt="java_logo" id="hero_image" />
+        <div id="hero_right">
+          <p class="font_60 main_green">JAVASCRIPT</p>
+          <p class="font_20 gray2">
+            The language that turns static web pages into interactive
+            adventures,<br />
+            like magic for the web!
+          </p>
+        </div>
+      </section>
+      <section class="content_section">
+        <div class="content_box image">
+          <p class="title">The Birth of the Graphic Web Browser</p>
+          <div>
+            <img src="../image/mosaic.jpeg" alt="mosaic" class="mosaic" />
+            <p class="content">
+              The developers of Java came from a Unix-based background, so the
+              syntax of Java is similar to the C language, which is the ancestor
+              of C++. Unlike C++, which added object-oriented features to C,
+              Java was developed as an object-oriented language from the start.
+              As explained earlier, the most significant feature of Java is its
+              platform (or OS) and CPU independence. The Java compiler converts
+              Java code into a special binary form called Java bytecode. To
+              execute Java bytecode, a special virtual machine called the Java
+              Virtual Machine (JVM) is required. This virtual machine can run
+              Java bytecode in the same way on any platform. As a result,
+              programs developed in Java can run anywhere on systems with a JVM
+              installed, regardless of the CPU or operating system. This feature
+              aligns well with the nature of web applications and contributed to
+              Java's explosive popularity.
+            </p>
+          </div>
+        </div>
+        <div class="content_box">
+          <p class="title">The Birth of a New Language</p>
+          <div>
+            <p class="content">
+              &nbsp;Marc decided to add a scripting language to the web. He
+              envisioned creating dynamic elements by manipulating DOM elements
+              within the websites viewed by users.
+              <br />
+              &nbsp;At the time, Java was gaining popularity but was considered
+              too heavy for the developers working primarily on websites.
+              Therefore, Marc recruited Brendan Eich and chose to modify the
+              existing Scheme language for this purpose. The concept of Scheme
+              was maintained, but its syntax was made more Java-like.
+              <br />
+              &nbsp;In September 1994, Brendan created a new language internally
+              called Mocha. This language was later renamed LiveScript, and the
+              LiveScript engine (interpreter) that could understand and execute
+              LiveScript was included in the Netscape Navigator browser.
+              <br />
+              &nbsp;At that time, the Java language was enjoying BTS-level
+              popularity. To ride the wave of Java’s success, the name
+              LiveScript was changed to JavaScript, marking the birth of
+              JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="content_box">
+          <p class="title">Script Standardization and Unification Process</p>
+          <div>
+            <p class="content">
+              &nbsp;Seeing the vast potential of browsers with Netscape
+              Navigator, Microsoft felt a pressing need to develop their own
+              browser. They decided to reverse-engineer Netscape Navigator
+              (Reverse Engineering - the process of analyzing a program to
+              restore its source code).
+              <br />
+              <br />
+              &nbsp;During this process, Microsoft copied the JavaScript engine
+              and source code from Netscape and created their own language
+              called JScript. This led to the release of Microsoft's Internet
+              Explorer browser, which caused significant difficulties for web
+              developers due to the lack of standardization, resulting in
+              frequent compatibility issues between browsers.
+              <br />
+              <br />
+              &nbsp;In 1996, Netscape approached the European Computer
+              Manufacturers Association (ECMA), an international standardization
+              body for information and communication systems, with a proposal to
+              create a standard for JavaScript. Consequently, the first ECMA
+              Script 1 language specification was published in 1997. ECMA Script
+              documents outline the syntactic requirements for creating
+              languages and engines that operate in browsers.
+              <br />
+              <br />
+              &nbsp;However, with Internet Explorer's market share rising to
+              95%, Microsoft eventually withdrew from participating in the ECMA
+              Script standardization.
+              <br />
+              <br />
+              &nbsp;By 2004, Mozilla released the Firefox browser and proposed
+              to ECMA to review standardization using their ActionScript 3
+              language and the Tamarin engine. However, ECMA decided it was
+              impractical to create a new standard since JavaScript and its
+              associated engine were already established. This led to intense
+              competition between Netscape, Microsoft, and Mozilla over
+              standardization. During this period, Jesse James Garrett
+              introduced AJAX (Asynchronous JavaScript and XML), which enabled
+              asynchronous data handling between servers and clients. The web
+              development market expanded with libraries like jQuery, Dojo, and
+              Mootools.
+              <br />
+              <br />
+              &nbsp;In 2008, Google released its Chrome browser, which featured
+              a powerful Just-In-Time (JIT) compilation engine, greatly speeding
+              up JavaScript execution. At this time, the four
+              companies—Netscape, Microsoft, Mozilla, and Google—discussed
+              standardization.
+              <br />
+              <br />
+              &nbsp;In 2009, ECMAScript 5 was finalized. Afterwards,
+            </p>
+          </div>
+          <div class="table_box">
+            <table>
+              <tr>
+                <th>Year</th>
+                <th>ECMAScript Version</th>
+              </tr>
+              <tr>
+                <td>2015</td>
+                <td>ECMAScript 6</td>
+              </tr>
+              <tr>
+                <td>2016</td>
+                <td>ECMAScript 7</td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>ECMAScript 8</td>
+              </tr>
+              <tr>
+                <td>2018</td>
+                <td>ECMAScript 9</td>
+              </tr>
+              <tr>
+                <td>2019</td>
+                <td>ECMAScript 10</td>
+              </tr>
+              <tr>
+                <td>2020</td>
+                <td>ECMAScript 2020</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="content_box_last">
+          <p class="title">Latest Trends</p>
+          <div>
+            <p class="content">
+              <span>SPA (Single Page Application)</span><br />
+              There is a growing trend towards &nbsp;Single Page Applications
+              (SPA), where data is fetched and only the necessary parts of the
+              page are updated dynamically. While it is possible to implement
+              SPAs using JavaScript alone, frameworks such as React, Angular,
+              and Vue have emerged to make this process easier.
+              <br />
+              <br />
+              <span>Node.js</span><br />
+              JavaScript, originally designed to add dynamic elements to web
+              browsers, has also led to the creation of Node.js. Node.js
+              utilizes the V8 JavaScript engine to enable server-side service
+              implementation. It allows for the development of mobile
+              applications using frameworks like React Native and Cordova, as
+              well as desktop applications using Electron.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+    <section class="source_box">
+      <p class="title">Sources</p>
+      <ul>
+        <li>
+          <a target="_blank" href="https://dream-frontend.tistory.com/14"
+            >https://dream-frontend.tistory.com/14</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://roseline.oopy.io/dev/javascript-back-to-the-basic/history-of-javascript"
+            >https://roseline.oopy.io/dev/javascript-back-to-the-basic/history-of-javascript</a
+          >
+        </li>
+      </ul>
+    </section>
     <footer class="footer_box">
       <div id="footer_left">
         <div class="logo_box">
