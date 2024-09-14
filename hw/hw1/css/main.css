@@ -150,30 +150,47 @@ main {
 }
 
 .font_60 {
+  margin: 0px;
   font-size: 60px;
   /* semi bold로 변경해 */
   font-weight: bold;
 }
 
 .font_36 {
+  margin: 0px;
   font-size: 36px;
   /* semi bold로 변경해 */
   font-weight: bold;
 }
 
 .font_28 {
+  margin: 0px;
   font-size: 28px;
   font-weight: bold;
 }
 
 .font_23 {
+  margin: 0px;
   font-size: 23px;
   /* regular로 변경해 */
   font-weight: normal;
 }
 
 .font_16 {
+  margin: 0px;
   font-size: 16px;
   /* regular로 변경해 */
   font-weight: normal;
+}
+
+.main_green {
+  color: #4caf4f;
+}
+
+.gray1 {
+  color: #4d4d4d;
+}
+
+.gray2 {
+  color: #717171;
 }
