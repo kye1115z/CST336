@@ -10,7 +10,7 @@
 #content_section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   margin-bottom: 166px;
   padding-top: 30px;
@@ -36,11 +36,12 @@
 
 .odd {
   margin: 0px 10%;
-  margin-bottom: 44px;
+  margin-bottom: 100px;
 }
 
 .even {
-  margin: 7%;
+  margin: 0px 7%;
+  margin-bottom: 100px;
   width: 86%;
   background-color: #f5f7fa;
   border-radius: 4px;
