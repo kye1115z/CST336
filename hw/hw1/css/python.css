@@ -14,6 +14,23 @@
   width: 100%;
   padding-top: 115px;
   margin-bottom: 166px;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 80%;
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    color: #717171;
+  }
 }
 
 .content_box {
