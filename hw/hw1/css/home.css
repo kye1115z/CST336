@@ -97,3 +97,9 @@
     color: #4caf4f;
   }
 }
+
+iframe {
+  width: 80%;
+  height: 600px;
+  border: none;
+}
