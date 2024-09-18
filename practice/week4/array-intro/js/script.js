@@ -14,7 +14,7 @@ console.log(weekdays);
 let shuffledWeekdays = _.shuffle(weekdays);
 console.group(shuffledWeekdays);
 
-// Looping
+// Looping through an Array
 for (let i of weekdays) {
   console.log(i);
 }

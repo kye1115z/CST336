@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Types</title>
+  </head>
+  <body>
+    <h1>Page Styles</h1>
+
+    <label>
+      Text Color:
+      <input type="text" id="textColor" placeholder="Enter Text Color" />
+    </label>
+    <button id="textColorBtn">Change Color</button>
+    <hr />
+    <label>
+      Text Size:
+      <input
+        type="number"
+        min="1"
+        max="3"
+        step="0.1"
+        placeholder="Enter Text Size"
+        id="textSize"
+      />
+    </label>
+    <button id="textSizeBtn">Change Size</button>
+    <hr />
+
+    <lable>
+      Background Color:
+      <select id="bgColor">
+        <option value="#ed645c">Red</option>
+        <option value="#32a852">Green</option>
+        <option value="#3263a8">Blue</option>
+      </select>
+    </lable>
+    <button id="bgColorBtn">Change Bg Color</button>
+    <hr />
+    <lable>
+      Centered:
+      <input type="checkbox" id="alignment" value="value" />
+    </lable>
+    <button id="alignmentBtn">Update</button>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
