@@ -4,18 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 3: Quiz</title>
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
   </head>
   <body>
     <h1>CSS Quiz</h1>
 
-    1. what is the CSS property to change to text color?
-    <br />
-    <label> <input name="q1" type="radio" /> font-color </label>
-    <label> <input name="q1" type="radio" /> color </label>
-    <label> <input name="q1" type="radio" /> text-color </label>
-    <label> <input name="q1" type="radio" /> fontColor </label>
+    1. What property in CSS is used to define how an element is displayed on a
+    webpage?
+    <div id="q1Choices"></div>
+    <div id="q1Answer"></div>
+    <br /><br />
+    <hr />
+    2. what is the CSS property to change to text color?
+    <div id="q2Choices"></div>
+    <div id="q2Answer"></div>
+    <br /><br />
+    <hr />
+    3. Which value of the position property keeps an element in the same spot
+    when scrolling?
+    <div id="q3Choices"></div>
+    <div id="q3Answer"></div>
+    <br /><br />
+    <hr />
+    4. What property would you use to center a block element horizontally?"
+    <div id="q4Choices"></div>
+    <div id="q4Answer"></div>
+    <br /><br />
+    <hr />
+    5. What is the maximum value you can assign to the opacity property?
+    <div id="q5Choices"></div>
+    <div id="q5Answer"></div>
+    <br /><br />
+    <hr />
+    <button id="grade_btn">Grade Quiz</button>
 
-    <button>Grade Quiz</button>
+    <div id="total_grade"></div>
+
     <script src="../js/script.js"></script>
   </body>
 </html>
