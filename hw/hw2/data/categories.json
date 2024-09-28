@@ -1,0 +1,50 @@
+{
+  "animals": [
+    "LION",
+    "TIGER",
+    "ELEPHANT",
+    "GIRAFFE",
+    "ZEBRA",
+    "KANGAROO",
+    "PANDA",
+    "KOALA",
+    "BEAR",
+    "WOLF"
+  ],
+  "fruits": [
+    "APPLE",
+    "BANANA",
+    "CHERRY",
+    "DATE",
+    "GRAPE",
+    "MANGO",
+    "ORANGE",
+    "PEACH",
+    "PINEAPPLE",
+    "STRAWBERRY"
+  ],
+  "countries": [
+    "USA",
+    "CANADA",
+    "FRANCE",
+    "GERMANY",
+    "ITALY",
+    "AUSTRALIA",
+    "JAPAN",
+    "BRAZIL",
+    "INDIA",
+    "SOUTH AFRICA"
+  ],
+  "professions": [
+    "DOCTOR",
+    "ENGINEER",
+    "TEACHER",
+    "NURSE",
+    "ARTIST",
+    "SCIENTIST",
+    "CHEF",
+    "LAWYER",
+    "MUSICIAN",
+    "CARPENTER"
+  ]
+}

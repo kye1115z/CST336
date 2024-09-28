@@ -1,0 +1,34 @@
+.hangman_img {
+  width: 29%;
+  margin-left: 8%;
+}
+
+.button_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-right: 8%;
+  padding: 20px;
+  width: 40%;
+}
+
+.category_btn {
+  background-color: transparent;
+  font-size: 1.8rem;
+  padding: 3px;
+  border: 10px solid transparent;
+  border-image: url("../img/border.png") 110 stretch;
+  cursor: pointer;
+  /* transition: all 0.3s ease; */
+  /* box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1); */
+  font-family: "Coming Soon", cursive;
+}
+
+.category_btn:hover {
+  font-size: 2rem;
+  transform: scale(1.05);
+}
+
+.hand-drawn-button:active {
+  transform: scale(0.95);
+}

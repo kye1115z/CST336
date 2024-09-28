@@ -1,0 +1,118 @@
+.title {
+  color: #096bb0;
+}
+
+#hangman_img {
+  width: 29%;
+  margin-left: 10%;
+  margin-right: 50px;
+}
+
+.game_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+}
+
+#word_display {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+#alphabet {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.overlay {
+  position: absolute;
+  background-image: url("../img/x.png");
+  background-repeat: no-repeat;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.alphabet_letter {
+  margin: 5px;
+  font-size: 2.5rem;
+  display: inline-block;
+  user-select: none;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#letter_input {
+  margin-right: 20px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  border: 9px solid transparent;
+  border-image: url("../img/border_mini.png") 70 stretch;
+  font-family: "Coming Soon", cursive;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: none;
+}
+
+#guess_btn {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+}
+
+#guess_btn:hover {
+  background-image: url("../img/arrow_hover.png");
+  background-size: 43px 43px;
+  cursor: pointer;
+}
+
+.result_title {
+  font-size: 3rem;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  background-color: white;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.next_choice {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.red {
+  color: #d32f2f;
+}
+
+.green {
+  color: #4caf50;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/game.css" />
+    <!-- Google fonts 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google fonts 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <p class="cs-b title"></p>
+      <p class="cs-b subtitle"></p>
+    </header>
+    <main>
+      <img id="hangman_img" alt="hangmanImg" />
+      <div class="game_wrapper">
+        <div id="word_display"></div>
+        <div id="alphabet"></div>
+        <div class="form">
+          <input
+            type="text"
+            id="letter_input"
+            maxlength="1"
+            pattern="[A-Za-z]"
+          />
+          <button id="guess_btn"></button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../js/game.js"></script>
+  </body>
+</html>
