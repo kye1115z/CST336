@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3: Quiz</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Lab 3: Quiz</h1>
+      <h6 id="attempts"></h6>
+    </header>
+    <main>
+      <div class="quiz_wrapper">
+        <div class="quiz_container">
+          <p class="question">
+            1. What property in CSS is used to define how an element is
+            displayed on a webpage?
+          </p>
+          <div id="q1Choices"></div>
+          <div id="q1Answer">
+            <div class="answer_wrapper">
+              <img src="../svg/correct.svg" alt="answer_img" id="q1I" />
+            </div>
+            <span id="q1AnswerSpan"></span>
+          </div>
+        </div>
+        <div class="quiz_container">
+          <p class="question">
+            2. what is the CSS property to change to text color?
+          </p>
+          <div id="q2Choices"></div>
+          <div id="q2Answer">
+            <div class="answer_wrapper">
+              <img src="../svg/correct.svg" alt="answer_img" id="q2I" />
+            </div>
+            <span id="q2AnswerSpan"></span>
+          </div>
+        </div>
+        <div class="quiz_container">
+          <p class="question">
+            3. Which value of the position property keeps an element in the same
+            spot when scrolling?
+          </p>
+          <div id="q3Choices"></div>
+          <div id="q3Answer">
+            <div class="answer_wrapper">
+              <img src="../svg/correct.svg" alt="answer_img" id="q3I" />
+            </div>
+            <span id="q3AnswerSpan"></span>
+          </div>
+        </div>
+        <div class="quiz_container">
+          <p class="question">
+            4. What property would you use to center a block element
+            horizontally?
+          </p>
+          <div id="q4Choices"></div>
+          <div id="q4Answer">
+            <div class="answer_wrapper">
+              <img src="../svg/correct.svg" alt="answer_img" id="q4I" />
+            </div>
+            <span id="q4AnswerSpan"></span>
+          </div>
+        </div>
+        <div class="quiz_container">
+          <p class="question">
+            5. What is the maximum value you can assign to the opacity property?
+          </p>
+          <div id="q5Choices"></div>
+          <div id="q5Answer">
+            <div class="answer_wrapper">
+              <img src="../svg/correct.svg" alt="answer_img" id="q5I" />
+            </div>
+            <span id="q5AnswerSpan"></span>
+          </div>
+        </div>
+      </div>
+      <button id="grade_btn">Grade Quiz</button>
+
+      <div id="total_grade"></div>
+    </main>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -86,7 +86,9 @@ function handleGuess() {
 
 function updateHangman() {
   const hangmanImg = document.querySelector("#hangman_img");
-  hangmanImg.src = `../img/hangman_${attempts}.png`;
+  if (hangmanImg) {
+    hangmanImg.src = `../img/hangman_${attempts}.png`;
+  }
 }
 
 function createAlphabetLetters() {
