@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <img src="../images/otter_logo.svg" alt="otter_logo" id="logo" />
+        <p id="sign_up">Sign up now</p>
+      </header>
+      <form id="signup_form">
+        <div class="display_row">
+          <div class="form_group">
+            <label for="first_name">First Name</label>
+            <input
+              type="text"
+              id="first_name"
+              class="short"
+              placeholder="Enter First Name"
+              required
+            />
+          </div>
+          <div class="form_group">
+            <label for="last_name">Last Name</label>
+            <input
+              type="text"
+              id="last_name"
+              class="short"
+              placeholder="Enter Last Name"
+              required
+            />
+          </div>
+        </div>
+        <div class="form_group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            class="long"
+            placeholder="otter@csumb.edu"
+            required
+          />
+        </div>
+        <div class="display_row">
+          <div class="form_group">
+            <label for="zip_code_input">Zip code</label>
+            <input
+              type="number"
+              id="zip_code_input"
+              class="short"
+              placeholder="93955"
+              required
+            />
+            <p id="zip_code_alert"></p>
+          </div>
+          <div class="form_group">
+            <label for="contact">Contact</label>
+            <input
+              type="text"
+              id="contact"
+              class="short"
+              placeholder="000 0000 0000"
+              required
+            />
+          </div>
+        </div>
+        <div id="info_box">
+          <div>City <span id="city"></span></div>
+          <div>Latitude <span id="latitude"></span></div>
+          <div>Lontitude <span id="lontitude"></span></div>
+        </div>
+        <div class="form_group">
+          <label for="state">State</label>
+          <select id="state_select">
+            <option value="">Select State</option>
+          </select>
+        </div>
+        <div class="form_group">
+          <label for="county">County</label>
+          <select id="county_select">
+            <option value="">Select County</option>
+          </select>
+        </div>
+        <section>
+          <div class="red_bar"></div>
+          <div class="form_group">
+            <label for="username_input">Desired Username</label>
+            <input
+              type="text"
+              id="username_input"
+              class="long"
+              placeholder="ottery"
+              required
+            />
+            <p id="username_alert">Username must have at least 3 characters.</p>
+          </div>
+          <div class="form_group">
+            <label for="password">Password</label>
+            <div class="username_box">
+              <input
+                type="password"
+                id="password"
+                class="long"
+                placeholder="Password"
+                required
+                autocomplete="new-password"
+              />
+              <div id="pwd_ex"></div>
+            </div>
+            <p id="password_alert">Password must have at least 6 characters.</p>
+          </div>
+          <div class="form_group">
+            <label for="confirm_pwd">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm_pwd"
+              placeholder="Confirm Password"
+              required
+              autocomplete="new-password"
+            />
+            <p id="confirm_pwd_alert"></p>
+          </div>
+        </section>
+        <button type="submit" id="sign_up_btn">Submit</button>
+      </form>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
