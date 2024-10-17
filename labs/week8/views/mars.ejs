@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solar System</title>
+    <%- include("partials/head.ejs") %>
+  </head>
+  <body>
+    <h1>Mars</h1>
+    <%- include("partials/menu.ejs") %>
+    <figure>
+      <img src="<%= marsData.image %>" alt="marsImage" width="100%" />
+      <figcaption><%= marsData.description %></figcaption>
+    </figure>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

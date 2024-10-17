@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mercury</title>
+    <%- include("partials/head.ejs") %>
+  </head>
+  <body>
+    <h1>Mercury</h1>
+    <%- include("partials/menu.ejs") %>
+    <div></div>
+    <figure>
+      <img src="<%= mercuryData.image %>" alt="murcuryImage" width="100%" />
+      <figcaption><%= mercuryData.description %></figcaption>
+    </figure>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

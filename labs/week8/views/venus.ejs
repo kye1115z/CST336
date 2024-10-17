@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Venus</title>
+    <%- include("partials/head.ejs") %>
+  </head>
+  <body>
+    <h1>Venus</h1>
+    <%- include("partials/menu.ejs") %>
+    <figure>
+      <img src="<%= venusData.image %>" alt="venusImage" width="100%" />
+      <figcaption><%= venusData.description %></figcaption>
+    </figure>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>
