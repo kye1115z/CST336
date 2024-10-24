@@ -1,19 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Nasa's media of the day</title>
+    <title>Nasa's Media of the Day</title>
     <%- include("partials/head.ejs") %>
   </head>
   <body>
-    <h1><%= nasaData.title %></h1>
-    <p>date: <%= nasaData.date %></p>
-    <p>explanation: <%= nasaData.explanation %></p>
+    <%- include("partials/menu.ejs") %>
+    <h1>NASA</h1>
     <div>
+      Month:
+      <select id="month">
+        <option value="">Select Month</option>
+        <option value="01">Jan</option>
+        <option value="02">Feb</option>
+        <option value="03">Mar</option>
+        <option value="04">Apr</option>
+        <option value="05">May</option>
+        <option value="06">Jun</option>
+        <option value="07">Jul</option>
+        <option value="08">Aug</option>
+        <option value="09">Sep</option>
+        <option value="10">Oct</option>
+        <option value="11">Nov</option>
+        <option value="12">Dec</option>
+      </select>
+    </div>
+    <div>
+      Day:
+      <input id="day" type="number" min="1" max="31" />
+    </div>
+    <div>
+      Year:
+      <input id="year" type="number" min="1900" max="2100" />
+    </div>
+    <button id="displayButton">Display Media</button>
+    <div id="output" style="margin-top: 20px"></div>
+
+    <div id="nasaDataContainer" style="margin-top: 20px">
+      <% if (nasaData) { %>
+      <h2><%= nasaData.title %></h2>
       <img
         src="<%= nasaData.url %>"
-        alt="nasaImage"
+        alt="<%= nasaData.title %>"
         style="max-width: 100%; height: auto"
       />
+      <p><%= nasaData.explanation %></p>
+      <% } else { %>
+      <p id="nasaMessage">No data available for the selected date.</p>
+      <% } %>
     </div>
+
+    <script>
+      document
+        .getElementById("displayButton")
+        .addEventListener("click", async function () {
+          const month = document.getElementById("month").value;
+          const day = document.getElementById("day").value;
+          const year = document.getElementById("year").value;
+
+          if (month && day && year) {
+            const response = await fetch(
+              `/nasa?month=${month}&day=${day}&year=${year}`
+            );
+            const data = await response.json();
+
+            const outputDiv = document.getElementById("nasaDataContainer");
+            outputDiv.innerHTML = ""; // Clear previous data
+
+            if (data) {
+              const title = document.createElement("h2");
+              title.textContent = data.title;
+              const image = document.createElement("img");
+              image.src = data.url;
+              image.alt = data.title;
+              image.style.maxWidth = "100%";
+              image.style.height = "auto";
+              const explanation = document.createElement("p");
+              explanation.textContent = data.explanation;
+
+              outputDiv.appendChild(title);
+              outputDiv.appendChild(image);
+              outputDiv.appendChild(explanation);
+            } else {
+              outputDiv.innerHTML =
+                "<p id='nasaMessage'>No data available for the selected date.</p>";
+            }
+          } else {
+            document.getElementById("output").innerHTML =
+              "Please select a month, day, and year.";
+          }
+        });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

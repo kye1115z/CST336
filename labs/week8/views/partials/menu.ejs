@@ -1,7 +1,33 @@
-<div style="display: flex; gap: 10px">
-  <a href="/">Home</a>
-  <a href="/mercury">Mercury</a>
-  <a href="/venus">Venus</a>
-  <a href="/mars">Mars</a>
-  <a href="/saturn">Saturn</a>
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div
+      class="bg-dark p-4"
+      class="menu_wrapper"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <a href="/" class="menu_button">Home</a>
+      <a href="/planetInfo?selectedBody=Mercury" class="menu_button">Mercury</a>
+      <a href="/planetInfo?selectedBody=Venus" class="menu_button">Venus</a>
+      <a href="/planetInfo?selectedBody=Earth" class="menu_button">Earth</a>
+      <a href="/planetInfo?selectedBody=Mars" class="menu_button">Mars</a>
+      <a href="/planetInfo?selectedBody=Jupiter" class="menu_button">Jupiter</a>
+      <a href="/planetInfo?selectedBody=Saturn" class="menu_button">Saturn</a>
+      <a href="/planetInfo?selectedBody=Uranus" class="menu_button">Uranus</a>
+      <a href="/planetInfo?selectedBody=Neptune" class="menu_button">Neptune</a>
+      <a href="/nasa" class="menu_button">NASA</a>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
 </div>
