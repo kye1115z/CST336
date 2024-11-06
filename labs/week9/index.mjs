@@ -17,87 +17,22 @@ const pool = mysql.createPool({
 const conn = await pool.getConnection();
 
 //routes
-app.get("/", (req, res) => {
-  res.render("home");
+app.get("/", async (req, res) => {
+  let sql = `SELECT firstName, lastName, authorId FROM authors ORDER BY lastName`;
+  const [rows] = await conn.query(sql);
+  console.log(rows);
+  res.render("home", { authors: rows });
 });
 
-app.get("/allAuthors", async (req, res) => {
-  let query =
-    "SELECT `authorId`, `firstName`, `lastName`, `country` FROM `authors` WHERE 1";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("authorList", { rows: rows });
-});
+app.get("/searchByKeyword", async (req, res) => {
+  // let keyword = req.query.keyword;
+  // let sql =
+  //   "SELECT `firstName`, `lastName`, `quote` FROM `quotes` NATURAL JOIN authors WHERE quote LIKE ?";
+  // let sqlParams = [`%${keyword}`];
+  // const [rows] = await conn.query(sql, sqlParams);
+  // console.log(keyword);
 
-app.get("/womanAuthors", async (req, res) => {
-  let query =
-    "SELECT `authorId`, `firstName`, `lastName`, `country` FROM `authors` WHERE `sex` = ?";
-  let params = ["F"];
-  const [rows] = await conn.query(query, params);
-  console.log(rows);
-  res.render("authorList", { rows: rows });
-});
-
-app.get("/allQuotes", async (req, res) => {
-  let query = "SELECT `quote` FROM `quotes` ORDER BY `quote` ASC;";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/inspirationalQuotes", async (req, res) => {
-  let query = "SELECT `quote` FROM `quotes` WHERE `category` = 'Inspirational'";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/lifeQuotes", async (req, res) => {
-  let query = "SELECT `quote` FROM `quotes` WHERE `quote` LIKE ?";
-  let params = [`%${"life"}%`];
-  const [rows] = await conn.query(query, params);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/wisdomQuotes", async (req, res) => {
-  let query =
-    "SELECT `quote` FROM `quotes` WHERE `category` = 'Wisdom' AND `quote` LIKE ?";
-  let params = [`%${"things"}%`];
-  const [rows] = await conn.query(query, params);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/likeQuotes", async (req, res) => {
-  let query =
-    "SELECT `quote` FROM `quotes` WHERE `likes` >= 50 AND `likes` <= 100";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/categoryList", async (req, res) => {
-  let query =
-    "SELECT DISTINCT `category` FROM `quotes` ORDER BY `category` ASC;";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/topQuotes", async (req, res) => {
-  let query =
-    "SELECT `quote`, `likes` FROM `quotes` ORDER BY `likes` DESC LIMIT 3;";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("quotesList", { rows: rows });
-});
-
-app.get("/authorPhotos", async (req, res) => {
-  let query = "SELECT DISTINCT `portrait` FROM `authors`";
-  const [rows] = await conn.query(query);
-  console.log(rows);
-  res.render("authorPhotos", { rows: rows });
+  res.render("quote.ejs", { rows: rows });
 });
 
 app.get("/dbTest", async (req, res) => {

@@ -25,10 +25,19 @@ app.get("/", async (req, res) => {
   res.render("home", { authors: rows, category: categroy_rows });
 });
 
+// api로 활용 가능
+app.get("/api/author/:authorId", async (req, res) => {
+  let authorId = req.params.authorId;
+  let sql = `SELECT * FROM authors WHERE authorId = ?`;
+  let sqlParams = [authorId];
+  const [rows] = await conn.query(sql, sqlParams);
+  res.send(rows);
+});
+
 app.get("/searchByKeyword", async (req, res) => {
   let keyword = req.query.keyword;
   let sql =
-    "SELECT `firstName`, `lastName`, `quote` FROM `quotes` NATURAL JOIN authors WHERE quote LIKE ?";
+    "SELECT `authorId`, `firstName`, `lastName`, `quote` FROM `quotes` NATURAL JOIN authors WHERE quote LIKE ?";
   let sqlParams = [`%${keyword}%`];
   const [rows] = await conn.query(sql, sqlParams);
   res.render("quote.ejs", { rows: rows });
