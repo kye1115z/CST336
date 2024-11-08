@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <details>
+      <summary>quote</summary>
+      <% for (let q of quote) {%>
+      <p><%= q.quote %></p>
+      <% } %>
+    </details>
+    <details>
+      <summary>author</summary>
+      <% for (let author of authors) {%>
+      <p><%= author.firstName %> <%= author.lastName %></p>
+      <% } %>
+    </details>
+  </body>
+</html>

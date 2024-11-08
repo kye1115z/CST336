@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Add New Quote</h1>
+    <form action="/addQuote" method="post">
+      <label for="quote">Quote:</label><br />
+      <textarea id="quote" name="quote"></textarea>
+      <br />
+      <select name="author">
+        <% for (let author of authors) {%>
+        <option value="<%= author.authorId %>">
+          <%= author.firstName %> <%= author.lastName %>
+        </option>
+        <% } %>
+      </select>
+      <select name="category">
+        <% for (let c of category) {%>
+        <option value="<%= c.category %>"><%= c.category %></option>
+        <% } %>
+      </select>
+      <br />
+      <p>
+        Don't see your author?
+        <a href="/addAuthor" target="_blank">Add one here!</a>
+      </p>
+      <br />
+      <button>Add Quote</button>
+    </form>
+  </body>
+</html>
