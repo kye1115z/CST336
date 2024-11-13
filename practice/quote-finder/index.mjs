@@ -18,11 +18,49 @@ const conn = await pool.getConnection();
 
 //routes
 app.get("/", async (req, res) => {
+  res.render("home");
+});
+
+app.get("/authors", async (req, res) => {
+  let sql = `SELECT authorId, firstName, lastName
+              FROM authors
+              ORDER BY lastName`;
+  const [rows] = await conn.query(sql);
+  res.render("authors", { authors: rows });
+});
+
+app.get("/searchQuote", async (req, res) => {
   let sql = `SELECT firstName, lastName, authorId FROM authors ORDER BY lastName`;
   let category_sql = `SELECT DISTINCT(category) FROM quotes`;
   const [rows] = await conn.query(sql);
   const [categroy_rows] = await conn.query(category_sql);
-  res.render("home", { authors: rows, category: categroy_rows });
+  res.render("searchQuote", { authors: rows, category: categroy_rows });
+});
+
+app.get("/authors/new", async (req, res) => {
+  res.render("addAuthor");
+});
+
+app.get("/authors/edit", async (req, res) => {
+  let authorId = req.query.authorId;
+  let sql = `SELECT * 
+            FROM authors
+            WHERE authorId = ?`;
+  let [authorData] = await conn.query(sql, [authorId]);
+  res.render("editAuthor", { authorData });
+});
+
+app.post("/author/edit", async (req, res) => {
+  let authorId = req.body.authorId;
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let biography = req.body.biography;
+
+  let sql = `UPDATE authors SET firstName = ?, lastName = ?, biography = ? WHERE authorId = ?`;
+  let sqlParams = [firstName, lastName, biography, authorId];
+  await conn.query(sql, sqlParams);
+
+  res.redirect("/authors");
 });
 
 // api로 활용 가능

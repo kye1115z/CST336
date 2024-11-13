@@ -6,39 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="m-3">
-      <h1>Quote Search</h1>
-      <form action="/searchByKeyword">
-        Keyword:
-        <input type="text" name="keyword" />
-        <button>search</button>
-      </form>
-      <form action="/searchByAuthor">
-        Author:
-        <select name="author">
-          <% for (let author of authors) {%>
-          <option value="<%= author.authorId %>">
-            <%= author.firstName %> <%= author.lastName %>
-          </option>
-          <% } %>
-        </select>
-        <button class="btn btn-outline-success">search</button>
-      </form>
-      <form action="/searchByCategory">
-        Category:
-        <select name="category">
-          <% for (let c of category) {%>
-          <option value="<%= c.category %>"><%= c.category %></option>
-          <% } %>
-        </select>
-        <button class="btn btn-outline-success">search</button>
-      </form>
-      <form action="/searchByLikes">
-        Search by Likes:
-        <input type="number" name="min" placeholder="min" />
-        <input type="number" name="max" placeholder="max" />
-        <button>search</button>
-      </form>
-    </div>
+    <form action="/authors">
+      <button>Display Authors</button>
+    </form>
+
+    <form action="/authors/new">
+      <button>Add new Authors</button>
+    </form>
+
+    <form action="/searchQuote">
+      <button>Search Quotes</button>
+    </form>
   </body>
 </html>
