@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head.ejs") %>
+    <link href="/css/quotes.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-container">
+      <%- include("partials/sidebar.ejs") %>
+      <div class="quotes-layout">
+        <h1 class="title">Quote</h1>
+        <div class="quotes-wrapper">
+          <% for (let row of rows) { %>
+          <div class="quote-item">
+            <p class="quote-text"><%= row.quote %></p>
+            <p class="quote-author">
+              - <%= row.firstName %> <%= row.lastName %>
+            </p>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

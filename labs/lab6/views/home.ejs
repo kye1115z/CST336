@@ -4,33 +4,27 @@
     <%- include("partials/head.ejs") %>
   </head>
   <body>
-    <div class="sidebar">
-      <h3 class="sidebar_header">Quotes Finder</h3>
-      <a class="active" href="/">Home</a>
-      <a href="/allAuthors">All Authors</a>
-      <a href="/addAuthor">Add Author</a>
-      <a href="/searchQuotes">Search Quotes</a>
-      <a href="/allQuotes">All Quotes</a>
-      <a href="/newQuote">New Quote</a>
+    <div class="main-container">
+      <%- include("partials/sidebar.ejs") %>
+      <!-- Page content -->
+      <div class="content">
+        <button class="home_btn" onclick="window.location.href='/allAuthors'">
+          All Authors
+        </button>
+        <button class="home_btn" onclick="window.location.href='/addAuthor'">
+          Add Author
+        </button>
+        <button class="home_btn" onclick="window.location.href='/searchQuotes'">
+          Search Quotes
+        </button>
+        <button class="home_btn" onclick="window.location.href='/allQuotes'">
+          All Quotes
+        </button>
+        <button class="home_btn" onclick="window.location.href='/newQuote'">
+          New Quote
+        </button>
+      </div>
     </div>
-
-    <!-- Page content -->
-    <div class="content">
-      <button class="home_btn" onclick="window.location.href='/allAuthors'">
-        All Authors
-      </button>
-      <button class="home_btn" onclick="window.location.href='/addAuthor'">
-        Add Author
-      </button>
-      <button class="home_btn" onclick="window.location.href='/searchQuotes'">
-        Search Quotes
-      </button>
-      <button class="home_btn" onclick="window.location.href='/allQuotes'">
-        All Quotes
-      </button>
-      <button class="home_btn" onclick="window.location.href='/newQuote'">
-        New Quote
-      </button>
-    </div>
+    <script src="/js/script.js"></script>
   </body>
 </html>

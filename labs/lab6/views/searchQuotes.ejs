@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head.ejs") %>
+    <link href="/css/quotes.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-container">
+      <%- include("partials/sidebar.ejs") %>
+      <div class="quotes-layout">
+        <h1 class="title">Quote Search</h1>
+        <div class="search-wrapper">
+          <form action="/searchByKeyword" class="search-form">
+            Keyword:
+            <input type="text" name="keyword" />
+            <button>search</button>
+          </form>
+          <form action="/searchByAuthor" class="search-form">
+            Author:
+            <select name="author">
+              <% for (let author of authors) {%>
+              <option value="<%= author.authorId %>">
+                <%= author.firstName %> <%= author.lastName %>
+              </option>
+              <% } %>
+            </select>
+            <button>search</button>
+          </form>
+          <form action="/searchByCategory" class="search-form">
+            Category:
+            <select name="category">
+              <% for (let c of category) {%>
+              <option value="<%= c.category %>"><%= c.category %></option>
+              <% } %>
+            </select>
+            <button>search</button>
+          </form>
+          <form action="/searchByLikes" class="search-form">
+            Search by Likes:
+            <div class="number-wrapper">
+              <input type="number" name="min" placeholder="min" />
+              <input type="number" name="max" placeholder="max" />
+            </div>
+            <button>search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
