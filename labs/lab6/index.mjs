@@ -17,6 +17,17 @@ const pool = mysql.createPool({
 const conn = await pool.getConnection();
 
 //routes
+// coming soon
+app.get("/allAuthors", async (req, res) => {
+  res.render("comingsoon");
+});
+app.get("/addAuthor", async (req, res) => {
+  res.render("comingsoon");
+});
+app.get("/newQuote", async (req, res) => {
+  res.render("comingsoon");
+});
+
 // home
 app.get("/", async (req, res) => {
   res.render("home");
@@ -29,6 +40,13 @@ app.get("/searchQuotes", async (req, res) => {
   const [author_rows] = await conn.query(author_sql);
   const [categroy_rows] = await conn.query(category_sql);
   res.render("searchQuotes", { authors: author_rows, category: categroy_rows });
+});
+
+app.get("/allQuotes", async (req, res) => {
+  let sql =
+    "SELECT `firstName`, `lastName`, `quote` FROM `quotes` NATURAL JOIN authors WHERE 1";
+  const [rows] = await conn.query(sql);
+  res.render("quotes", { rows: rows });
 });
 
 // Search Filters
