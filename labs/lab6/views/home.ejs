@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes APP</title>
+    <%- include("partials/head.ejs") %>
   </head>
-  <body></body>
+  <body>
+    <div class="sidebar">
+      <h3 class="sidebar_header">Quotes Finder</h3>
+      <a class="active" href="/">Home</a>
+      <a href="/allAuthors">All Authors</a>
+      <a href="/addAuthor">Add Author</a>
+      <a href="/allQuotes">All Quotes</a>
+      <a href="/newQuote">New Quote</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+      <button class="home_btn" onclick="window.location.href='/allAuthors'">
+        All Authors
+      </button>
+      <button class="home_btn" onclick="window.location.href='/addAuthor'">
+        Add Author
+      </button>
+      <button class="home_btn" onclick="window.location.href='/allQuotes'">
+        All Quotes
+      </button>
+      <button class="home_btn" onclick="window.location.href='/newQuote'">
+        New Quote
+      </button>
+    </div>
+  </body>
 </html>
