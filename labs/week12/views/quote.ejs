@@ -23,11 +23,13 @@
   </head>
   <body>
     <h1>Quote</h1>
-    <% for (let row of rows) { %> <%= row. quote %><br />
-    -
+    <% for (let row of rows) { %> [
+    <a href="/quotes/edit?quoteId=<%=row.quoteId%>">Update</a> ] <%= row.
+    quote%><br />
+    <!-- -
     <a class="authorLink" href="#" authorId="<%= row.authorId %>"
       ><%= row.firstName %><%= row.lastName %></a
-    ><br /><br />
+    ><br /><br /> -->
     <% } %>
 
     <!-- Modal -->

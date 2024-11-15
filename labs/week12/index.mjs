@@ -5,6 +5,8 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const pool = mysql.createPool({
   host: "yeyeeun.online",
@@ -29,6 +31,14 @@ app.get("/authors", async (req, res) => {
   res.render("authors", { authors: rows });
 });
 
+app.get("/quotes", async (req, res) => {
+  let sql = `SELECT quoteId, quote, category
+              FROM quotes
+              ORDER BY quoteId`;
+  const [rows] = await conn.query(sql);
+  res.render("quote", { rows: rows });
+});
+
 app.get("/searchQuote", async (req, res) => {
   let sql = `SELECT firstName, lastName, authorId FROM authors ORDER BY lastName`;
   let category_sql = `SELECT DISTINCT(category) FROM quotes`;
@@ -48,6 +58,23 @@ app.get("/authors/edit", async (req, res) => {
             WHERE authorId = ?`;
   let [authorData] = await conn.query(sql, [authorId]);
   res.render("editAuthor", { authorData });
+});
+
+app.get("/quotes/edit", async (req, res) => {
+  let quoteId = req.query.quoteId;
+  let sql = `SELECT * 
+            FROM quotes
+            WHERE quoteId = ?`;
+  let author_sql = `SELECT firstName, lastName, authorId FROM authors ORDER BY lastName`;
+  let category_sql = `SELECT DISTINCT(category) FROM quotes`;
+  let [quoteData] = await conn.query(sql, [quoteId]);
+  const [author_rows] = await conn.query(author_sql);
+  const [categroy_rows] = await conn.query(category_sql);
+  res.render("editQuote", {
+    quoteData: quoteData,
+    author_rows: author_rows,
+    categroy_rows: categroy_rows,
+  });
 });
 
 app.post("/author/edit", async (req, res) => {

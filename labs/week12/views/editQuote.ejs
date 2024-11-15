@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      textarea {
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit Quote</h1>
+
+    <form action="/quote/edit" method="POST">
+      <input type="hidden" name="quoteId" value="<%=quoteData[0].quoteId%>" />
+
+      <textarea name="quote"><%=quoteData[0].quote%></textarea>
+      <br />
+      <br />
+      <label for="author">Author</label>
+      <select name="authorId" id="author">
+        <% author_rows.forEach(author => { %>
+        <option value="<%= author.authorId %>" <%= (author.authorId === quoteData[0].authorId) ? "selected" : ""%>>
+          <%= author.firstName %> <%= author.lastName %>
+        </option>
+        <% }) %>
+      </select>
+      <br />
+      <br />
+      <label for="category">Category</label>
+      <select id="category" name="category">
+        <% categroy_rows.forEach(category => { %>
+          <option value="<%= category.category %>" <%= (category.category === quoteData[0].category) ? "selected" : ""%>>
+          <%=category.category%>
+        </option>
+        <% }) %>
+      </select>
+      <br />
+      <button>Update</button>
+    </form>
+  </body>
+</html>
