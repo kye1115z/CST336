@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Add New Author</h1>
+
+    <form action="/addAuthor" method="post">
+      <label for="firstName">First Name</label>
+      <input id="firstName" name="firstName" />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input id="lastName" name="lastName" />
+      <br />
+      <label>Gender</label>
+      <label for="male">
+        <input type="radio" id="male" name="gender" value="male" />
+        Male
+      </label>
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female" />
+        Female
+      </label>
+      <br />
+      <label for="biography">Biography</label>
+      <textarea id="biography" name="biography"></textarea>
+      <br />
+      <label for="picture">Picture</label>
+      <textarea id="picture" name="picture"></textarea>
+      <br />
+      <label for="dob">Date of Birth</label>
+      <input id="dob" name="dob" type="date" />
+      <br />
+      <label for="dod">Date of Death</label>
+      <input id="dod" name="dod" type="date" />
+      <br />
+      <button>Add Author</button>
+    </form>
+    <script src="/js/author.js"></script>
+  </body>
+</html>

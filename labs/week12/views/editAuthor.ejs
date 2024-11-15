@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Add New Author</h1>
+
+    <form action="/author/edit" method="POST">
+      <input
+        type="hidden"
+        name="authorId"
+        value="<%=authorData[0].authorId%>"
+      />
+      <label for="firstName">First Name</label>
+      <input
+        id="firstName"
+        name="firstName"
+        value="<%=authorData[0].firstName%>"
+      />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input
+        id="lastName"
+        name="lastName"
+        value="<%=authorData[0].lastName%>"
+      />
+      <br />
+      <label>Gender</label>
+      <label for="male">
+        <input type="radio" id="male" name="gender" value="male" />
+        Male
+      </label>
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female" />
+        Female
+      </label>
+      <br />
+      <label for="biography">Biography</label>
+      <textarea id="biography" name="biography">
+<%=authorData[0].biography%></textarea
+      >
+      <br />
+      <label for="picture">Picture</label>
+      <textarea id="picture" name="picture"></textarea>
+      <br />
+      <label for="dob">Date of Birth</label>
+      <% let dobFormatted = new Date(authorData[0].dob); dobFormatted =
+      dobFormatted.getFullYear() + "/" + (dobFormatted.getMonth()+1 + "/" +
+      dobFormatted.getDate()) %>
+      <input id="dob" name="dob" type="date" value="<%=dobFormatted%>" />
+      <br />
+      <label for="dod">Date of Death</label>
+      <input id="dod" name="dod" type="date" value="<%=authorData[0].dod%>" />
+      <br />
+      <button>Edit Author</button>
+    </form>
+    <script src="/js/author.js"></script>
+  </body>
+</html>
