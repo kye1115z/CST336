@@ -85,6 +85,8 @@ select:focus {
 }
 
 .quote-item {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
@@ -101,8 +103,10 @@ select:focus {
 }
 
 .quote-author {
-  text-align: right;
-  font-size: 1em;
+  text-decoration: underline;
+  margin-top: 1rem;
+  align-self: flex-end;
+  font-size: 1.1em;
   font-weight: bold;
   color: #04aa6d;
 }
@@ -113,7 +117,45 @@ select:focus {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-.quote-author {
-  color: #04aa6d;
+.quote-author:hover,
+.quote-author:focus {
+  color: #038e56;
+}
+
+.no-quotes-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* modal */
+#authorImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #04aa6d;
+  margin-bottom: 10px;
+}
+
+.authorInfo_p {
   font-size: 1.1em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.authorInfo_span {
+  font-weight: bold !important;
+  color: #04aa6d !important;
+}
+
+#biography {
+  font-size: 1em;
+  color: #666;
+  margin-top: 15px;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: justify;
 }
