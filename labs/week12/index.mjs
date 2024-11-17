@@ -57,6 +57,7 @@ app.get("/authors/edit", async (req, res) => {
             FROM authors
             WHERE authorId = ?`;
   let [authorData] = await conn.query(sql, [authorId]);
+  console.log(authorData);
   res.render("editAuthor", { authorData });
 });
 
@@ -81,13 +82,42 @@ app.post("/author/edit", async (req, res) => {
   let authorId = req.body.authorId;
   let firstName = req.body.firstName;
   let lastName = req.body.lastName;
+  let gender = req.body.gender;
   let biography = req.body.biography;
+  let picture = req.body.picture;
+  let dob = req.body.dob;
+  let dod = req.body.dod;
+  console.log(dob);
+  console.log(dod);
 
-  let sql = `UPDATE authors SET firstName = ?, lastName = ?, biography = ? WHERE authorId = ?`;
-  let sqlParams = [firstName, lastName, biography, authorId];
+  let sql = `UPDATE authors SET firstName = ?, lastName = ?, sex = ?, biography = ?, portrait = ?, dob = ?, dod = ? WHERE authorId = ?`;
+  let sqlParams = [
+    firstName,
+    lastName,
+    gender,
+    biography,
+    picture,
+    dob,
+    dod,
+    authorId,
+  ];
   await conn.query(sql, sqlParams);
 
   res.redirect("/authors");
+});
+
+app.post("/quotes/edit", async (req, res) => {
+  let quoteId = req.body.quoteId;
+  let quote = req.body.quote;
+  let authorId = req.body.authorId;
+  let category = req.body.category;
+  let likes = req.body.likes;
+
+  let sql = `UPDATE quotes SET quote = ?, authorId = ?, category = ?, likes = ? WHERE quoteId = ?`;
+  let sqlParams = [quote, authorId, category, likes, quoteId];
+  await conn.query(sql, sqlParams);
+
+  res.redirect("/quotes");
 });
 
 // api로 활용 가능

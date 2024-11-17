@@ -14,7 +14,7 @@
   <body>
     <h1>Edit Quote</h1>
 
-    <form action="/quote/edit" method="POST">
+    <form action="/quotes/edit" method="POST">
       <input type="hidden" name="quoteId" value="<%=quoteData[0].quoteId%>" />
 
       <textarea name="quote"><%=quoteData[0].quote%></textarea>
@@ -38,6 +38,10 @@
         </option>
         <% }) %>
       </select>
+      <br />
+      <br />
+      <label for="likes">Likes</label>
+      <input name="likes" id="likes" type="number" value="<%=quoteData[0].likes%>" />
       <br />
       <button>Update</button>
     </form>
