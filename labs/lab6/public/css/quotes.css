@@ -25,6 +25,11 @@
   justify-content: space-between;
 }
 
+.search_label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 button {
   background-color: #04aa6d;
   color: white;
@@ -60,6 +65,12 @@ select:focus {
 .number-wrapper {
   display: flex;
   gap: 10px;
+}
+
+.error {
+  padding: 10px;
+  color: red;
+  display: none;
 }
 
 /* quotes lists */

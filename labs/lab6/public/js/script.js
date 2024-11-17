@@ -1,3 +1,4 @@
+// side bar
 const currentUrl = window.location.pathname;
 
 const links = document.querySelectorAll(".sidebar a");
@@ -17,3 +18,17 @@ if (currentUrl === "/") {
 } else if (currentUrl === "/newQuote") {
   document.getElementById("newQuote").classList.add("active");
 }
+
+// valid test
+document
+  .getElementById("keywordForm")
+  .addEventListener("submit", function (event) {
+    const keywordInput = document.getElementById("keyword_input").value.trim();
+    const errorMessage = document.getElementById("error-message");
+    if (keywordInput.length < 3) {
+      errorMessage.style.display = "block";
+      event.preventDefault();
+    } else {
+      errorMessage.style.display = "none";
+    }
+  });
