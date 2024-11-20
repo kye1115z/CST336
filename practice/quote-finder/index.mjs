@@ -5,6 +5,8 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const pool = mysql.createPool({
   host: "yeyeeun.online",
@@ -54,10 +56,25 @@ app.post("/author/edit", async (req, res) => {
   let authorId = req.body.authorId;
   let firstName = req.body.firstName;
   let lastName = req.body.lastName;
+  let gender = req.body.gender;
   let biography = req.body.biography;
+  let picture = req.body.picture;
+  let dob = req.body.dob;
+  let dod = req.body.dod;
+  console.log(dob);
+  console.log(dod);
 
-  let sql = `UPDATE authors SET firstName = ?, lastName = ?, biography = ? WHERE authorId = ?`;
-  let sqlParams = [firstName, lastName, biography, authorId];
+  let sql = `UPDATE authors SET firstName = ?, lastName = ?, sex = ?, biography = ?, portrait = ?, dob = ?, dod = ? WHERE authorId = ?`;
+  let sqlParams = [
+    firstName,
+    lastName,
+    gender,
+    biography,
+    picture,
+    dob,
+    dod,
+    authorId,
+  ];
   await conn.query(sql, sqlParams);
 
   res.redirect("/authors");

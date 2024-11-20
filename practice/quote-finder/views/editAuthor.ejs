@@ -21,6 +21,7 @@
         value="<%=authorData[0].firstName%>"
       />
       <br />
+      <br />
       <label for="lastName">Last Name</label>
       <input
         id="lastName"
@@ -28,32 +29,43 @@
         value="<%=authorData[0].lastName%>"
       />
       <br />
+      <br />
       <label>Gender</label>
       <label for="male">
-        <input type="radio" id="male" name="gender" value="male" />
-        Male
+        <input type="radio" id="male" name="gender" value="male" <%=
+        (authorData[0].sex === 'm') ? "checked" : ""%> /> Male
       </label>
       <label for="female">
-        <input type="radio" id="female" name="gender" value="female" />
-        Female
+        <input type="radio" id="female" name="gender" value="female" <%=
+        (authorData[0].sex === 'f') ? "checked" : ""%>/> Female
       </label>
+      <br />
       <br />
       <label for="biography">Biography</label>
       <textarea id="biography" name="biography">
 <%=authorData[0].biography%></textarea
       >
       <br />
+      <br />
       <label for="picture">Picture</label>
-      <textarea id="picture" name="picture"></textarea>
+      <textarea id="picture" name="picture">
+<%=authorData[0].portrait%></textarea
+      >
+      <br />
       <br />
       <label for="dob">Date of Birth</label>
-      <% let dobFormatted = new Date(authorData[0].dob); dobFormatted =
-      dobFormatted.getFullYear() + "/" + (dobFormatted.getMonth()+1 + "/" +
-      dobFormatted.getDate()) %>
-      <input id="dob" name="dob" type="date" value="<%=dobFormatted%>" />
+      <% let dob = new Date(authorData[0].dob); let dobFormatted =
+      dob.getFullYear() + "-" + String(dob.getMonth() + 1).padStart(2, '0') +
+      "-" + String(dob.getDate()).padStart(2, '0'); %>
+      <input id="dob" name="dob" type="date" value="<%= dobFormatted %>" />
+      <br />
       <br />
       <label for="dod">Date of Death</label>
-      <input id="dod" name="dod" type="date" value="<%=authorData[0].dod%>" />
+      <% let dod = new Date(authorData[0].dod); let dodFormatted =
+      dod.getFullYear() + "-" + String(dod.getMonth() + 1).padStart(2, '0') +
+      "-" + String(dod.getDate()).padStart(2, '0'); %>
+      <input id="dod" name="dod" type="date" value="<%=dodFormatted%>" />
+      <br />
       <br />
       <button>Edit Author</button>
     </form>
