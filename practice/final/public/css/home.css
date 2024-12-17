@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comic_sites_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site_name {
+  color: #333333;
+}
+
+.site_link {
+  text-decoration-line: none;
+}

@@ -2,12 +2,18 @@
 <html lang="en">
   <head>
     <%- include("partials/head.ejs") %>
+    <link href="/css/home.css" rel="stylesheet" />
   </head>
   <body>
-    <header><%- include("partials/navbar.ejs") %></header>
+    <%- include("partials/navbar.ejs") %>
     <main>
-      <div>hi</div>
+      <p class="page_title">My Favorite Comics</p>
+      <button id="addComicBtn">Add Comic</button>
+      <div id="sitesBox"></div>
+      <div id="randomComicBox"></div>
+      <button id="randomComicBtn">Display Random Comic</button>
     </main>
     <%- include("partials/footer.ejs") %>
+    <script src="js/home.js"></script>
   </body>
 </html>

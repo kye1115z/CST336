@@ -34,6 +34,34 @@ app.get("/addComment", async (req, res) => {
   res.render("addComment");
 });
 
+// api
+app.get("/api/comic_sites", async (req, res) => {
+  try {
+    const sql = "SELECT * FROM `fe_comic_sites`;";
+    const [comic_sties] = await conn.query(sql);
+    res.json(comic_sties);
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+app.get("/api/random_comic", async (req, res) => {
+  try {
+    const number_sql = "SELECT COUNT(1) totalRecords FROM fe_comics;";
+    const sql = "SELECT * FROM `fe_comics` WHERE comicId = ?;";
+    const number = await conn.query(number_sql);
+    let randomRecord = Math.floor(
+      Math.random() * (number[0][0].totalRecords - 1)
+    );
+    const [random_comic] = await conn.query(sql, randomRecord);
+    res.json(random_comic);
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 //dbTest
 app.get("/dbTest", async (req, res) => {
   let sql = "SELECT CURDATE()";
