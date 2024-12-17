@@ -2,12 +2,27 @@
 <html lang="en">
   <head>
     <%- include("partials/head.ejs") %>
+    <link href="/css/addComment.css" rel="stylesheet" />
   </head>
   <body>
     <header><%- include("partials/navbar.ejs") %></header>
     <main>
-      <div>hi</div>
+      <p class="page_title">Add Comment</p>
+      <div>
+        <p class="comic_title"><%= comic.comicTitle %></p>
+        <img src="<%= comic.comicUrl %>" alt="comic_image" />
+      </div>
+      <form method="post">
+        <input type="hidden" name="comicId" value="<%= comicId %>" />
+        <label> Username: <input id="username_input" name="username" /> </label>
+        <label> Email Address: <input id="email_input" name="email" /> </label>
+        <label>
+          Comment: <textarea id="comment_input" name="comment"></textarea>
+        </label>
+        <button id="submitBtn">Submit Comment</button>
+      </form>
     </main>
     <%- include("partials/footer.ejs") %>
+    <script src="/js/addComment.js"></script>
   </body>
 </html>
