@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <%- include("partials/head.ejs") %>
+    <link href="/css/comic.css" rel="stylesheet" />
   </head>
   <body>
     <header><%- include("partials/navbar.ejs") %></header>
     <main>
-      <div>hi</div>
+      <p class="page_title">Comic Page</p>
+      <div>
+        <% comics.forEach((comic) => { %>
+        <div class="comic_box">
+          <p class="comic_title"><%= comic.comicTitle %></p>
+          <img src="<%= comic.comicUrl %>" alt="comic_image" />
+          <p>
+            [<a href="/addComment?comicId=<%=comic.comicId%>">Add Comments</a>]
+            [<a href="/comment?comicId=<%=comic.comicId%>">View Comments</a>]
+          </p>
+          <% })%>
+        </div>
+      </div>
     </main>
     <%- include("partials/footer.ejs") %>
+    <script src="/js/comic.js"></script>
   </body>
 </html>

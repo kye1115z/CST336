@@ -29,8 +29,14 @@ app.get("/addComic", async (req, res) => {
 
 app.get("/comic", async (req, res) => {
   let comicSiteId = req.query.comicSiteId;
+  const sql = `SELECT * FROM fe_comics WHERE comicSiteId = ?;`;
+  const [comics] = await conn.query(sql, [comicSiteId]);
 
-  res.render("displayComic", comicSiteId);
+  res.render("displayComic", { comics });
+});
+
+app.get("/comment", async (req, res) => {
+  res.render("comment");
 });
 
 app.get("/addComment", async (req, res) => {
