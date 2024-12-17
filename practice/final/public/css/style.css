@@ -1,0 +1,64 @@
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* navbar */
+header {
+  width: 100vw;
+}
+
+.navbar_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.3rem;
+  padding: 2rem 5rem;
+  font-size: 1.25rem;
+}
+
+.navbar_logo {
+  width: 35px;
+  height: 35px;
+}
+
+.menu_box {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.menu_item {
+  color: #333333;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #0fa0d9;
+  }
+}
+
+.menu_active {
+  color: #0fa0d9;
+}
+
+/* main */
+main {
+  flex: 1;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}

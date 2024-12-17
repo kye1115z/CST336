@@ -12,14 +12,14 @@ const pool = mysql.createPool({
   host: "yeyeeun.online",
   user: "yeyeeuno_webuser3",
   password: "Cst-336",
-  database: "yeyeeuno_quotetest",
+  database: "yeyeeuno_fe",
   connectionLimit: 10,
   waitForConnections: true,
 });
 const conn = await pool.getConnection();
 
 app.get("/", async (req, res) => {
-  res.render("login");
+  res.render("home");
 });
 
 //dbTest

@@ -22,6 +22,18 @@ app.get("/", async (req, res) => {
   res.render("home");
 });
 
+app.get("/addComic", async (req, res) => {
+  res.render("addComic");
+});
+
+app.get("/comic", async (req, res) => {
+  res.render("displayComic");
+});
+
+app.get("/addComment", async (req, res) => {
+  res.render("addComment");
+});
+
 //dbTest
 app.get("/dbTest", async (req, res) => {
   let sql = "SELECT CURDATE()";
