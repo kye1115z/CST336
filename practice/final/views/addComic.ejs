@@ -2,12 +2,31 @@
 <html lang="en">
   <head>
     <%- include("partials/head.ejs") %>
+    <link href="/css/addComic.css" rel="stylesheet" />
   </head>
   <body>
     <header><%- include("partials/navbar.ejs") %></header>
     <main>
-      <div>hi</div>
+      <p class="page_title">New Comic</p>
+      <form id="addComicForm" method="post">
+        <label> Title: <input id="title_input" name="title" /> </label>
+        <label> Url: <input id="url_input" name="url" /> </label>
+        <label>
+          Publish Date:
+          <input
+            id="publish_date_input"
+            name="publish_date"
+            placeholder="YYYY-MM-DD"
+          />
+        </label>
+        <label>
+          Web Site:
+          <select id="websiteSelect" name="website"></select>
+        </label>
+        <button id="submitBtn">Submit New Comic</button>
+      </form>
     </main>
     <%- include("partials/footer.ejs") %>
+    <script src="/js/addComic.js"></script>
   </body>
 </html>

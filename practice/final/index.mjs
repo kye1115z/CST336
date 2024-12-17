@@ -18,6 +18,7 @@ const pool = mysql.createPool({
 });
 const conn = await pool.getConnection();
 
+// get
 app.get("/", async (req, res) => {
   res.render("home");
 });
@@ -27,11 +28,27 @@ app.get("/addComic", async (req, res) => {
 });
 
 app.get("/comic", async (req, res) => {
-  res.render("displayComic");
+  let comicSiteId = req.query.comicSiteId;
+
+  res.render("displayComic", comicSiteId);
 });
 
 app.get("/addComment", async (req, res) => {
   res.render("addComment");
+});
+
+// post
+app.post("/addComic", async (req, res) => {
+  const { title, url, publish_date, website } = req.body;
+  try {
+    const sql = `INSERT INTO fe_comics (comicUrl, comicTitle, comicSiteId, comicDate) VALUES (?, ?, ?, ?);`;
+    const sqlParams = [url, title, website, publish_date];
+    await conn.query(sql, sqlParams);
+    res.redirect(`/comic?comicSitedId=${website}`);
+  } catch (error) {
+    console.error("Error posting new comic:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 // api
@@ -41,7 +58,7 @@ app.get("/api/comic_sites", async (req, res) => {
     const [comic_sties] = await conn.query(sql);
     res.json(comic_sties);
   } catch (error) {
-    console.error("Error fetching categories:", error);
+    console.error("Error fetching comic sites:", error);
     res.status(500).send("Internal Server Error");
   }
 });
